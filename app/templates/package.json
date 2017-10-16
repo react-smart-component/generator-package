@@ -1,0 +1,47 @@
+{
+    "name": "<%=_packageName%>",
+    "version": "<%=_version%>",
+    "description": "",
+    "keywords": [
+        "<%=_packageName%>"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "tslint -c tslint.json 'src/**/*.ts'",
+        "build": "npm run lint && node ./scripts/commands/build.js",
+        "release": "npm run build && node ./scripts/commands/publish.js"
+    },
+    "engines": {
+        "node": ">=6"
+    },
+    "bugs": {
+        "url": "<%=_repo%>/issues"
+    },
+    "main": "index.js",
+    "homepage": "<%=_homepage%>",
+    "author": "<%=_author%>",
+    "repository": {
+        "type": "git",
+        "url": "<%=_repo%>.git"
+    },
+    "files": [
+        "lib"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^8.0.33",
+        "log-symbols": "^1.0.2",
+        "execa": "^0.6.3",
+        "fs-extra": "^3.0.1",
+        "glob-promise": "^3.2.0",
+        "babel-core": "^6.26.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-register": "^6.26.0",
+        "tslint": "^5.7.0",
+        "tslint-eslint-rules": "^4.1.1",
+        "typescript": "^2.4.2"
+    }
+}
