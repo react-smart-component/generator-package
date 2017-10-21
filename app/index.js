@@ -47,7 +47,6 @@ module.exports = class extends Generator {
             appname,
             options,
         } = this;
-        this.appname = appname.replace(/\s/g, '-');
         this._packageName = options.pkgName || appname;
         this._author = options.author;
         this._repo = options.repo || `https://github.com/cyqresig/${appname}`;
