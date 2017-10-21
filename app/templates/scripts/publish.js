@@ -19,7 +19,7 @@ const shell = async(file, args) => {
 };
 
 const publish = async() => {
-    const { version } = require();
+    const { version } = require('../../package.json');
     const branch = await shell('git', ['symbolic-ref', '--short', 'HEAD']);
     await execLog('npm', ['run', 'build']);
     const outputPath = path.join(base, output);
