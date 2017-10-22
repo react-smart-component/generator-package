@@ -1,6 +1,6 @@
 {
   "name": "generator-smart-package",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A npm package generator using typescript",
   "main": "index.js",
   "scripts": {
