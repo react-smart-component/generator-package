@@ -11,4 +11,8 @@ npm link
 
 # Publish
 
+npm version <version>
+
+git push --follw-tags
+
 npm login -> npm publish
