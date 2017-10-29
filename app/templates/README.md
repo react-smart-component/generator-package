@@ -15,4 +15,4 @@ npm version <version>
 
 git push --follw-tags
 
-npm login -> npm run publish
+npm login -> npm run release
