@@ -26,7 +26,10 @@ const build = async function() {
         await tsc(args);
 
         console.log('start babel...');
-        await babel(args);
+        await babel({
+            ...args,
+            src: output,
+        });
 
         console.log('start copyFiles...');
         await copyFiles({
