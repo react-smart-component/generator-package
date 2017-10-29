@@ -1,5 +1,6 @@
 import logSymbols from 'log-symbols';
 import * as configs from './config';
+import clean from './clean';
 import tsc from './tsc';
 import babel from './babel';
 import copyFiles from './copy';
@@ -22,6 +23,12 @@ const fileNames = [
 const description = 'build';
 const build = async function() {
     try {
+        console.log(`clean output...`);
+        await clean({
+            ...args,
+            src: output,
+        });
+
         console.log('start tsc...');
         await tsc(args);
 
